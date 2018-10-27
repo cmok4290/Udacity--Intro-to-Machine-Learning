@@ -31,14 +31,26 @@ from sklearn.naive_bayes import GaussianNB
 # create model
 clf = GaussianNB()
 
+# start train time 
+t0 = time()
+
 # fit training data to model
 clf.fit(features_train, labels_train)
+
+# end train time
+print "training time:", round(time()-t0, 3), "s"
+
+# start predict time
+t0 = time()
 
 # predict with test data
 clf.predict(features_test)
 
+# end predict time
+print "prediction time:", round(time()-t0, 3), "s"
+
 # print accuracy score
-print clf.score(features_test, labels_test)
+print "accuracy score:", clf.score(features_test, labels_test)
 
 #########################################################
 

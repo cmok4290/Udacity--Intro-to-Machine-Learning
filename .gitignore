@@ -13,3 +13,5 @@ bin
 lib
 local
 share
+
+requirements.txt
